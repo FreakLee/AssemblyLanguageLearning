@@ -169,7 +169,7 @@ int test(int a, int b)
 
 然后在 main() 函数中调用一下这个函数：
 
-```
+``` c
 int result0 = test(3,4);
 int result1 = test(4,3);
 printf("result0 = %d,result1 = %d",result0,result1);
@@ -190,9 +190,9 @@ add x0, x0, x1
 
 此时，对于main()函数中的这段代码，果然如期输出了7：
 ``` c
-    //int result0 = test(3,4);
-    int result1 = test(4,3);
-    printf("result1 = %d",result1);
+//int result0 = test(3,4);
+int result1 = test(4,3);
+printf("result1 = %d",result1);
 ```
 
 
