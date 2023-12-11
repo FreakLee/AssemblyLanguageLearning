@@ -175,6 +175,26 @@ int result1 = test(4,3);
 printf("result0 = %d,result1 = %d",result0,result1);
 //result0 = 3,result1 = 4
 ```
+注释result0相关的代码，然后再看看寄存器里面的数据，x0存了4，x1存了3，返回的是x0。
+```
+General Purpose Registers:
+        x0 = 0x0000000000000004
+        x1 = 0x0000000000000003
+```
+
+可以猜想对于test()函数的实现部分，可以是如下样子：
+
+``` 
+add x0, x0, x1
+```
+
+此时，对于main()函数中的这段代码，果然如期输出了7：
+``` c
+    //int result0 = test(3,4);
+    int result1 = test(4,3);
+    printf("result1 = %d",result1);
+```
+
 
 
 
