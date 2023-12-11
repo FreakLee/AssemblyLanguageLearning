@@ -188,7 +188,7 @@ General Purpose Registers:
 add x0, x0, x1
 ```
 
-此时，对于main()函数中的这段代码，果然如期输出了7：
+此时，对于main()函数中的这段代码，如期输出了7：
 ``` c
 //int result0 = test(3,4);
 int result1 = test(4,3);
